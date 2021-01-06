@@ -3,6 +3,10 @@
  */
 
 var mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://devn:devn@cluster0.ueo55.mongodb.net/<dbname>?retryWrites=true&w=majority', { useNewUrlParser: true,
+useCreateIndex: true,
+useUnifiedTopology: true,
+useFindAndModify: false});
 
 const BookSchema = new mongoose.Schema({
   isbn: {
